@@ -38,7 +38,15 @@ The app lives in your menu bar and shows the number of running Node processes. C
 
 ### Download Release
 
-Download the latest `Noodle.app` from [Releases](../../releases) and move it to your Applications folder.
+1. Download the latest `Noodle-vX.X.X.zip` from [Releases](../../releases)
+2. Unzip and move `Noodle.app` to your Applications folder
+3. Open Terminal and run:
+   ```bash
+   xattr -cr /Applications/Noodle.app
+   ```
+4. Launch Noodle
+
+> **Note:** The `xattr` command is needed because the app isn't signed with an Apple Developer certificate. macOS quarantines unsigned apps downloaded from the internet.
 
 ### Build from Source
 
